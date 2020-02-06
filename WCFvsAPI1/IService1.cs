@@ -21,8 +21,11 @@ namespace WCFvsAPI1
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         [OperationContract]
-        List<SearchResult> BuscarLista(string palabra);
+        //List<SearchResult> BuscarLista(string palabra);
+        List<SearchResultModified> BuscarLista(string palabra);
+
         // TODO: agregue aquí sus operaciones de servicio
+
     }
 
 
@@ -47,4 +50,5 @@ namespace WCFvsAPI1
             set { stringValue = value; }
         }
     }
+
 }

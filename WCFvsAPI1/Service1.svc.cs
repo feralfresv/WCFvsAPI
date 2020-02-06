@@ -34,7 +34,7 @@ namespace WCFvsAPI1
 
 
 
-        public List<SearchResult> BuscarLista(string palabra)
+        public List<SearchResultModified> BuscarLista(string palabra)
         {
             var ServicioYouTube = new YouTubeService(new BaseClientService.Initializer()
             {
@@ -48,7 +48,20 @@ namespace WCFvsAPI1
 
             SearchListResponse BuscarListaRespuesta = BuscarListaSolicitud.Execute();
             IList<SearchResult> searchResults = BuscarListaRespuesta.Items;
-            return searchResults.ToList();
+
+            
+            List<SearchResultModified> searchResultModifieds = new List<SearchResultModified>();
+
+            foreach (var item in searchResults)
+            {
+                SearchResultModified searchResultModified = new SearchResultModified();
+                searchResultModified.VideoId = item.Id.VideoId;
+                searchResultModified.ImageUrl = item.Snippet.Thumbnails.Default__.Url;
+                searchResultModified.Title = item.Snippet.Title;
+                searchResultModifieds.Add(searchResultModified);
+            }
+            //return searchResults.ToList();
+            return searchResultModifieds;
 
         }
 
