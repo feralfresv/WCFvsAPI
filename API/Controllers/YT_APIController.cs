@@ -60,5 +60,12 @@ namespace API.Controllers
             //return BD.SaveChanges() > 0;
             return Request.CreateResponse(HttpStatusCode.Created, TYT);
         }
+        //dbo.TableYouTUbe
+        [HttpGet]
+        public IEnumerable<TableYoutube> Get()
+        {
+            var listado = BD.TableYoutube.ToList();
+            return listado;
+        }
     }
 }
