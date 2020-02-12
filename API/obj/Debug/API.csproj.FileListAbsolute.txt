@@ -110,3 +110,7 @@ C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\obj\Debug\API.csproj.
 C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\obj\Debug\API.csproj.CopyComplete
 C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\obj\Debug\API.dll
 C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\obj\Debug\API.pdb
+C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\bin\EntityFramework.dll
+C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\bin\EntityFramework.SqlServer.dll
+C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\bin\EntityFramework.xml
+C:\Users\Curso\source\repos\Academia_Softtek\WCFvsAPI1\API\bin\EntityFramework.SqlServer.xml

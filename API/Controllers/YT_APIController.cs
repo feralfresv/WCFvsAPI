@@ -14,7 +14,7 @@ using System.Web.Http;
 namespace API.Controllers
 {
     public class YT_APIController : ApiController
-    {
+    {    
         [HttpGet]
         public List<SearchResultModified> BuscarLista(string palabra)
         {
@@ -45,7 +45,20 @@ namespace API.Controllers
             }
             //return searchResults.ToList();
             return searchResultModifieds;
+        }
 
+
+        Models.YouTubeEntities BD = new YouTubeEntities();
+        [HttpPost]
+        public HttpResponseMessage Post([FromBody]TableYoutube TYT)
+        {
+            using (Models.YouTubeEntities BD = new YouTubeEntities());
+            {
+                BD.TableYoutube.Add(TYT);
+                BD.SaveChanges();
+            }        
+            //return BD.SaveChanges() > 0;
+            return Request.CreateResponse(HttpStatusCode.Created, TYT);
         }
     }
 }

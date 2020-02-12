@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YouTubeModelStoreContainer" CdmEntityContainer="YouTubeEntities">
+    <EntitySetMapping Name="TableYoutube">
+      <EntityTypeMapping TypeName="YouTubeModel.TableYoutube">
+        <MappingFragment StoreEntitySet="TableYoutube">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="IdYoutube" ColumnName="IdYoutube" />
+          <ScalarProperty Name="url" ColumnName="url" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
