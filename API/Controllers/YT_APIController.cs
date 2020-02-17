@@ -15,6 +15,8 @@ namespace API.Controllers
 {
     public class YT_APIController : ApiController
     {    
+
+        //Buscar Video
         [HttpGet]
         public List<SearchResultModified> BuscarLista(string palabra)
         {
@@ -52,7 +54,7 @@ namespace API.Controllers
         [HttpPost]
         public HttpResponseMessage Post([FromBody]TableYoutube TYT)
         {
-            using (Models.YouTubeEntities BD = new YouTubeEntities());
+            using (Models.YouTubeEntities BD = new YouTubeEntities())
             {
                 BD.TableYoutube.Add(TYT);
                 BD.SaveChanges();
@@ -60,6 +62,8 @@ namespace API.Controllers
             //return BD.SaveChanges() > 0;
             return Request.CreateResponse(HttpStatusCode.Created, TYT);
         }
+
+
         //dbo.TableYouTUbe
         [HttpGet]
         public IEnumerable<TableYoutube> Get()
